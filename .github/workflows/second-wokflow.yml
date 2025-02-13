@@ -1,4 +1,5 @@
 name: Triggers
+run-name: I'm learning - second example - triggers
 on:
   push:
     branches:
