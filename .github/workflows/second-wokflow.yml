@@ -28,7 +28,7 @@ on:
   schedule:
     - cron: "5 * * * *"
 jobs:
-  hola-mundo-manual:
+  hello-world-manual:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,8 +38,8 @@ jobs:
       - name: Definir lenguaje
         run: echo "LANGUAGE=${{ inputs.lenguaje_favorito }}" >> $GITHUB_ENV
       - name: Correr script
-        run: python hola_lenguaje.py
-  hola-mundo:
+        run: python hello_world.py
+  hello-world:
     if: ${{ github.event_name != 'workflow_dispatch' }}
     runs-on: ubuntu-latest
     steps:
@@ -48,4 +48,4 @@ jobs:
       - name: Definir variable
         run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
       - name: Correr script
-        run: python hola_mundo.py
+        run: python hello-world.py
