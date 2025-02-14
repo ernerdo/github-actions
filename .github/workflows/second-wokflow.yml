@@ -27,7 +27,7 @@ on:
         default: Ernesto
         type: string
   schedule:
-    - cron: "5/5 * * * *"
+    - cron: "*/5 * * * *"
 jobs:
   hello-world-manual:
     runs-on: ubuntu-latest
